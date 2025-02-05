@@ -41,6 +41,12 @@
             font-weight: 600;
             font-size: 2.5em;
         }
+        .subtitle {
+            color: #666;
+            margin-top: 5px;
+            font-size: 1.1em;
+            font-style: italic;
+        }
         h2 {
             margin-top: 15px;
             font-size: 1.3em;
@@ -51,8 +57,8 @@
             display: flex;
             gap: 0;
             flex-wrap: wrap;
-            margin-top: 20px;
-            padding-top: 20px;
+            margin-top: 10px;
+            padding-top: 10px;
         }
         .column {
             flex: 1;
@@ -81,11 +87,19 @@
         .contact {
             margin-top: 40px;
             padding-top: 20px;
-            border-top: 1px solid #333;
+            border-top: 1px solid #ddd;
         }
         @media (max-width: 768px) {
             .column {
                 flex: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+            .column:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
             }
         }
     </style>
@@ -96,6 +110,7 @@
         <a href="/links" class="active">Links</a>
     </nav>
     <h1>Links</h1>
+    <div class="subtitle">this is placeholder text</div>
     
     <div class="content-wrapper">
         <div class="column">
