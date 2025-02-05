@@ -1,1 +1,1 @@
-html i wrote for a personal wesbite
+simple html i wrote for a personal wesbite
