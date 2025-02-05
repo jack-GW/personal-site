@@ -9,7 +9,7 @@
         body {
             font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
             color: #333;
@@ -47,24 +47,15 @@
             color: #111;
             font-weight: 500;
         }
-        .link-card {
-            background: #f2ede1;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            transition: transform 0.2s ease;
+        .content-wrapper {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
         }
-        .link-card:hover {
-            transform: translateY(-2px);
-        }
-        .link-card h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.2em;
-        }
-        .link-card p {
-            margin: 0 0 15px 0;
-            color: #666;
+        .column {
+            flex: 1;
+            min-width: 250px;
         }
         .link-list {
             list-style: none;
@@ -81,43 +72,49 @@
         a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+            .column {
+                flex: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <nav class="nav">
         <a href="/">Home</a>
         <a href="/links" class="active">Links</a>
-        <!-- <a href="/people">People</a> -->
     </nav>
     <h1>Links</h1>
     
-    <div>
-        <h3>Blogs I Read</h3>
-        <ul class="link-list">
-            <li><a href="https://www.semianalysis.com/">Semianalysis</a></li>
-            <li><a href="https://situational-awareness.ai/">Situational Awareness</a></li>
-            <li><a href="https://astralcodexten.substack.com/">Astral Codex Ten</a></li>
-            <li><a href="https://marginalrevolution.com/">Marginal Revolution</a></li>
-            <li><a href="https://www.dwarkeshpatel.com">Dwarkesh Patel</a></li>
-            <li><a href="https://www.ageofinvention.xyz/">Age of Invention</a></li>
-            <li><a href="https://www.owlposting.com/">Owl Posting</a></li>
-            <li><a href="https://model-thinking.com/">Model Thinking</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Music</h3>
-        <ul class="link-list">
-            <li><a href="https://open.spotify.com/artist/53wzLvSq8PmyEjEAocacS4">My Band</a></li>
-            <li><a href="https://rateyourmusic.com/~Amatuerish">Album Ratings</a></li>
-            <li><a href="https://www.youtube.com/@jackgwhitaker">My Youtube Channel</a></li>
-        </ul>
-    </div>
-    <div>
-        <h3>Books</h3>
-        <ul class="link-list">
-            <li><a href="https://en.wikipedia.org/wiki/Zero_to_One">Zero to One</a></li>
-            <li><a href="https://en.wikipedia.org/wiki/Infinite_Jest">Infinite Jest</a></li>
-        </ul>
+    <div class="content-wrapper">
+        <div class="column">
+            <h3>Blogs I Read</h3>
+            <ul class="link-list">
+                <li><a href="https://www.semianalysis.com/">Semianalysis</a></li>
+                <li><a href="https://situational-awareness.ai/">Situational Awareness</a></li>
+                <li><a href="https://astralcodexten.substack.com/">Astral Codex Ten</a></li>
+                <li><a href="https://marginalrevolution.com/">Marginal Revolution</a></li>
+                <li><a href="https://www.dwarkeshpatel.com">Dwarkesh Patel</a></li>
+                <li><a href="https://www.ageofinvention.xyz/">Age of Invention</a></li>
+                <li><a href="https://www.owlposting.com/">Owl Posting</a></li>
+                <li><a href="https://model-thinking.com/">Model Thinking</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Music</h3>
+            <ul class="link-list">
+                <li><a href="https://open.spotify.com/artist/53wzLvSq8PmyEjEAocacS4">My Band</a></li>
+                <li><a href="https://rateyourmusic.com/~Amatuerish">Album Ratings</a></li>
+                <li><a href="https://www.youtube.com/@jackgwhitaker">My Youtube Channel</a></li>
+            </ul>
+        </div>
+        <div class="column">
+            <h3>Books</h3>
+            <ul class="link-list">
+                <li><a href="https://en.wikipedia.org/wiki/Zero_to_One">Zero to One</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Infinite_Jest">Infinite Jest</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
