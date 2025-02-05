@@ -1,9 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Abstract mark with blue squares -->
-  <rect x="8" y="8" width="12" height="12" 
-        fill="none" 
-        stroke="#0066FF" 
-        stroke-width="2"/>
-  <rect x="12" y="12" width="12" height="12" 
-        fill="#0066FF"/>
+  <circle cx="16" cy="16" r="14" fill="#f7f7f2"/>
 </svg>
