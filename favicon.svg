@@ -1,11 +1,3 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#f7f7f2"/>
-  <text x="16" y="24" 
-        font-family="Georgia, serif" 
-        font-size="24"
-        font-weight="bold"
-        text-anchor="middle" 
-        fill="#333">
-    J
-  </text>
+  <circle cx="16" cy="16" r="12" fill="black"/>
 </svg>
