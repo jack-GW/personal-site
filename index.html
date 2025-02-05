@@ -9,17 +9,19 @@
         body {
             font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
             line-height: 1.6;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
             color: #333;
             background-color: #f7f7f2;
         }
+        
         .nav {
             border-bottom: 1px solid #ddd;
             padding-bottom: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
+        
         .nav a {
             margin-right: 20px;
             font-size: 1.1em;
@@ -27,46 +29,124 @@
             text-decoration: none;
             transition: color 0.2s ease;
         }
+        
         .nav a:hover {
             color: #000;
             text-decoration: none;
         }
+        
         .nav a.active {
             color: #000;
             font-weight: 500;
         }
+        
         h1 {
             color: #000;
-            margin: 0;
+            margin: 0 0 25px 0;
             font-weight: 600;
             font-size: 2.5em;
         }
+        
+        .subtitle {
+            color: #666;
+            margin: 0;
+            font-size: 1em;
+            font-style: italic;
+        }
+        
         h2 {
-            margin-top: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
             font-size: 1.3em;
             color: #111;
             font-weight: 500;
         }
+        
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            color: #111;
+            font-weight: 500;
+        }
+        
+        .section {
+            margin: 25px 0;
+        }
+        
+        .content-wrapper {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .column {
+            flex: 1;
+            min-width: 250px;
+            padding: 0 20px;
+            border-right: 1px solid #ddd;
+        }
+        
+        .column:last-child {
+            border-right: none;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* For the home page lists that need left padding */
+        .content-list {
+            padding-left: 20px;
+            list-style: disc;
+        }
+        
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        li {
+            margin: 12px 0;
+        }
+        
         a {
             color: #0066cc;
             text-decoration: none;
         }
+        
         a:hover {
             text-decoration: underline;
         }
-        .section {
-            margin: 25px 0;
-        }
+        
         .contact {
             margin-top: 40px;
             padding-top: 20px;
             border-top: 1px solid #ddd;
+            line-height: 1.8;
         }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin: 8px 0;
+        
+        @media (max-width: 768px) {
+            .column {
+                flex: 100%;
+                border-right: none;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .column:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+            }
+            
+            .content-wrapper {
+                gap: 20px;
+            }
         }
     </style>
 </head>
