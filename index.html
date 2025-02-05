@@ -15,6 +15,26 @@
             color: #333;
             background-color: #f7f7f2;
         }
+        .nav {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .nav a {
+            margin-right: 20px;
+            font-size: 1.1em;
+            color: #555;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .nav a:hover {
+            color: #000;
+            text-decoration: none;
+        }
+        .nav a.active {
+            color: #000;
+            font-weight: 500;
+        }
         h1 {
             margin-bottom: 30px;
             color: #000;
@@ -51,6 +71,11 @@
     </style>
 </head>
 <body>
+    <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="links.html">Links</a>
+    </nav>
+    
     <h1>Jack Whitaker</h1>
     <h2>Current</h2>
     <ul>
@@ -58,13 +83,11 @@
         <li>Podcast Producer at <a href="https://www.aroundtheprompt.com">Around the Prompt</a> with Logan Kilpatrick</li>
         <li>Emergent Ventures Fellow</li>
     </ul>
-
     <h2>Former</h2>
     <ul>
         <li>Full time Producer of the <a href="https://www.dwarkeshpatel.com">Dwarkesh Podcast</a></li>
         <li>Media Intern at <a href="https://worksinprogress.co">Works In Progress</a> within Stripe</li>
     </ul>
-
     <h2>Mentors</h2>
     <ul>
         <li>Dwarkesh Patel - <a href="https://www.dwarkeshpatel.com">Podcast</a></li>
@@ -72,7 +95,6 @@
         <li>Nick Whitaker - <a href="www.highmodernism.com/">Website</a></li>
         <li>Tyler Cowen - <a href="https://marginalrevolution.com/">Marginal Revolution</a></li>
     </ul>
-
     <div class="contact">
         <strong>Message Me:</strong><br>
         Email: <a href="mailto:johngrosswhitaker@gmail.com">johngrosswhitaker@gmail.com</a><br>
