@@ -1,1 +1,1 @@
-just the html for a basic website
+html i wrote for a personal wesbite
