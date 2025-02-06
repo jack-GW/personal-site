@@ -1,205 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
-            line-height: 1.6;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-            color: #333;
-            background-color: #f7f7f2;
-        }
-        
-        .nav {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-        }
-        
-        .nav a {
-            margin-right: 20px;
-            font-size: 1.1em;
-            color: #555;
-            text-decoration: none;
-            transition: color 0.2s ease;
-        }
-        
-        .nav a:hover {
-            color: #000;
-            text-decoration: none;
-        }
-        
-        .nav a.active {
-            color: #000;
-            font-weight: 500;
-        }
-        
-        h1 {
-            color: #000;
-            margin: 0 0 20px 0;
-            font-weight: 600;
-            font-size: 2.5em;
-        }
-        
-        .subtitle {
-            color: #666;
-            margin: 0;
-            font-size: 1em;
-            font-style: italic;
-        }
-        
-        h2 {
-            margin-top: 20px;
-            margin-bottom: 12px;
-            font-size: 1.3em;
-            color: #111;
-            font-weight: 500;
-        }
-        
-        h3 {
-            margin-top: 20px;
-            margin-bottom: 12px;
-            font-size: 1.3em;
-            color: #111;
-            font-weight: 500;
-        }
-        
-        .section {
-            margin: 20px 0;
-        }
-        
-        .content-wrapper {
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        
+      body {
+        font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+        line-height: 1.6;
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #333;
+        background-color: #f7f7f2;
+      }
+
+      .nav {
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+      }
+
+      .nav a {
+        margin-right: 20px;
+        font-size: 1.1em;
+        color: #555;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .nav a:hover {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .nav a.active {
+        color: #000;
+        font-weight: 500;
+      }
+
+      h1 {
+        color: #000;
+        margin: 0 0 20px 0;
+        font-weight: 600;
+        font-size: 2.5em;
+      }
+
+      .subtitle {
+        color: #666;
+        margin: 0;
+        font-size: 1em;
+        font-style: italic;
+      }
+
+      h2 {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-size: 1.3em;
+        color: #111;
+        font-weight: 500;
+      }
+
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-size: 1.3em;
+        color: #111;
+        font-weight: 500;
+      }
+
+      .section {
+        margin: 20px 0;
+      }
+
+      .content-wrapper {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+      }
+
+      .column {
+        flex: 1;
+        min-width: 250px;
+        padding: 0 20px;
+        border-right: 1px solid #ddd;
+      }
+
+      .column:last-child {
+        border-right: none;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .content-list {
+        padding-left: 20px;
+        list-style: disc;
+      }
+
+      .link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin: 8px 0;
+      }
+
+      a {
+        color: #0066cc;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .contact {
+        margin-top: 30px;
+        padding-top: 15px;
+        border-top: 1px solid #ddd;
+        line-height: 1.6;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 40px 0;
+      }
+
+      .image-container {
+        margin: 30px auto;
+        text-align: center;
+      }
+
+      .image-container img {
+        max-width: 100%;
+        max-height: 80vh;
+        width: 400;
+        height: 800;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      @media (max-width: 768px) {
         .column {
-            flex: 1;
-            min-width: 250px;
-            padding: 0 20px;
-            border-right: 1px solid #ddd;
+          flex: 100%;
+          border-right: none;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 15px;
+          margin-bottom: 15px;
         }
-        
+
         .column:last-child {
-            border-right: none;
+          border-bottom: none;
+          margin-bottom: 0;
         }
-        
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+
+        .content-wrapper {
+          gap: 15px;
         }
-        
-        .content-list {
-            padding-left: 20px;
-            list-style: disc;
-        }
-        
-        .link-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        li {
-            margin: 8px 0;
-        }
-        
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .contact {
-            margin-top: 30px;
-            padding-top: 15px;
-            border-top: 1px solid #ddd;
-            line-height: 1.6;
-        }
-        
-        .divider {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 40px 0;
-        }
-        
-        .image-container {
-            margin: 30px auto;
-            text-align: center;
-        }
-        
+
         .image-container img {
-            max-width: 100%;
-            max-height: 80vh;
-            width: 400;
-            height: 800;
-            border-radius: 4px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          max-width: 100%;
         }
-        
-        @media (max-width: 768px) {
-            .column {
-                flex: 100%;
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-            }
-            
-            .column:last-child {
-                border-bottom: none;
-                margin-bottom: 0;
-            }
-            
-            .content-wrapper {
-                gap: 15px;
-            }
-            
-            .image-container img {
-                max-width: 100%;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <nav class="nav">
-        <a href="/">Home</a>
-        <a href="/links">Links</a>
-        <a href="/questions">Questions</a>
-        <a href="/about" class="active">About</a>
+      <a href="/">Home</a>
+      <a href="/links">Links</a>
+      <a href="/questions">Questions</a>
+      <a href="/about" class="active">About</a>
     </nav>
     <h1>About</h1>
-    
+
     <div class="section">
-        <p>I'm a sophmore at stanford.</p>
-        
-        <p>My journey in this field has led me through various roles and projects, each contributing to my growing understanding of how technology can be leveraged to create positive change. I believe in the power of collaboration and open source contribution to drive innovation forward.</p>
+      <p>I'm a sophmore at stanford.</p>
+
+      <p>
+        My journey in this field has led me through various roles and projects,
+        each contributing to my growing understanding of how technology can be
+        leveraged to create positive change. I believe in the power of
+        collaboration and open source contribution to drive innovation forward.
+      </p>
     </div>
 
-    <hr class="divider">
+    <hr class="divider" />
 
     <div class="image-container">
-        <img src="/jack.jpeg" alt="Placeholder Image">
+      <img src="/me.jpeg" alt="Placeholder Image" />
     </div>
 
     <div class="contact">
-        <strong>Message Me:</strong><br>
-        Email: <a href="mailto:johngrosswhitaker@gmail.com">johngrosswhitaker@gmail.com</a><br>
-        <a href="https://x.com/jackgwhitaker">Twitter</a> · 
-        <a href="https://www.linkedin.com/in/jack-gross-whitaker-75ba24264/">LinkedIn</a>
+      <strong>Message Me:</strong><br />
+      Email:
+      <a href="mailto:johngrosswhitaker@gmail.com"
+        >johngrosswhitaker@gmail.com</a
+      ><br />
+      <a href="https://x.com/jackgwhitaker">Twitter</a> ·
+      <a href="https://www.linkedin.com/in/jack-gross-whitaker-75ba24264/"
+        >LinkedIn</a
+      >
     </div>
-</body>
+  </body>
 </html>
