@@ -64,7 +64,7 @@
         }
         
         h3 {
-            margin-top: 20px;
+            margin-top: 0;
             margin-bottom: 12px;
             font-size: 1.3em;
             color: #111;
@@ -77,20 +77,15 @@
         
         .content-wrapper {
             display: flex;
+            flex-direction: column;
             gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 15px;
+            margin-top: 5px;
         }
         
         .column {
             flex: 1;
             min-width: 250px;
             padding: 0 20px;
-            border-right: 1px solid #ddd;
-        }
-        
-        .column:last-child {
-            border-right: none;
         }
         
         ul {
@@ -107,7 +102,7 @@
         .link-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 15px 0;
         }
         
         li {
@@ -132,16 +127,7 @@
         
         @media (max-width: 768px) {
             .column {
-                flex: 100%;
-                border-right: none;
-                border-bottom: 1px solid #ddd;
-                padding-bottom: 15px;
-                margin-bottom: 15px;
-            }
-            
-            .column:last-child {
-                border-bottom: none;
-                margin-bottom: 0;
+                padding: 0 10px;
             }
             
             .content-wrapper {
@@ -153,24 +139,21 @@
 <body>
     <nav class="nav">
         <a href="/">Home</a>
-        <a href="/links">Links</a>
-        <a href="/questions" class = "active">Questions?!</a>
+        <a href="/links" class="active">Links</a>
+        <a href="/questions">Questions</a>
         <a href="/about">About</a>
     </nav>
-    <h1>Questions</h1>
-    <p class="subtitle">Inspired by <a href="https://patrickcollison.com/questions">Patrick Collison's </a> and <a href="https://gwern.net/questions">Gwern's questions,     </a> These are some questions that I think will have important and intresting answers. Reach out to me if you're intrested in answering any of them</p>
-    
-    <div class="section">
-        <h2>Under Construction :)</h2>
-
-    </div>
-</body>
-</html>
-    <div class="contact">
-        <strong>Message Me:</strong><br>
-        Email: <a href="mailto:johngrosswhitaker@gmail.com">johngrosswhitaker@gmail.com</a><br>
-        <a href="https://x.com/jackgwhitaker">Twitter</a> · 
-        <a href="https://www.linkedin.com/in/jack-gross-whitaker-75ba24264/">LinkedIn</a>
+    <h1>Links</h1>
+    <div class="content-wrapper">
+        <div class="column">
+            <h3>Classic Blogs</h3>
+            <ul class="link-list">
+                <li><a href="https://astralcodexten.substack.com/">Astral Codex Ten</a></li>
+                <li><a href="https://marginalrevolution.com/">Marginal Revolution</a></li>
+                <li><a href="https://gwern.net/">Gwern</a></li>
+                <li><a href="https://www.semianalysis.com/">Semianalysis</a></li>
+            </ul>
+        </div>
     </div>
 </body>
 </html>
