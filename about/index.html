@@ -10,6 +10,27 @@
       rel="stylesheet"
     />
     <style>
+      @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+
+        .nav { animation-delay: 0.2s; }
+        h1 { animation-delay: 0.4s; }
+        h2 { animation-delay: 0.6s; }
+        ul { animation-delay: 0.8s; }
+        .contact { animation-delay: 0s; }
       body {
         font-family: "Playfair Display", Georgia, "Times New Roman", serif;
         line-height: 1.6;
@@ -178,26 +199,26 @@
     </style>
   </head>
   <body>
-    <nav class="nav">
+    <nav class="nav animate-in">
       <a href="/">Home</a>
       <a href="/links">Links</a>
       <a href="/questions">Questions</a>
       <a href="/about" class="active">About</a>
     </nav>
-    <h1>About</h1>
+    <h1 class="animate-in">About</h1>
 
-    <div class="section">
+    <div class="section animate-in">
       <p>I'm Jack Whitaker. Currently I'm a sophmore at Stanford working on Logan Kilpatrick's podcast amoungst other projects. I'm intrested in A(g)I, economics, philosophy, betting, and film. I'm also a hobbyist musician, mostly on guitar. I used to play a lot of Europa Universialis, Hearts of Iron and Civilization, but I've been trying very hard to be at least a little productive. Reach out if you'd like to meet me or chat!<p>
     </div>
 
-    <div class="image-container">
+    <div class="image-container animate-in">
       <img
         src="../images/test3.png"
         alt="A young man, likely in his late teens or early twenties, with a distinctive, symmetrical face and strong features. He has dark, slightly messy hair styled casually, giving him a contemporary yet timeless look. His expression is pensive and slightly melancholic, with a distant, thoughtful gaze. He has strong eyebrows, a straight nose, and defined cheekbones. The lighting from a window casts soft shadows that highlight his features. His overall appearance aligns with current 'Gen Z' trends."
       />
     </div>
 
-    <div class="contact">
+    <div class="contact animate-in">
       <strong>Message Me:</strong><br />
       Email:
       <a href="mailto:johngrosswhitaker@gmail.com"
