@@ -152,6 +152,38 @@
             line-height: 1.6;
         }
         
+        .announcement-box {
+            position: fixed;
+            right: 300px;
+            top: 120px;
+            background-color: #f7f7f2;
+            padding: 50px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-shadow: 4px 4px 12px rgba(0,0,0,0.12);
+            max-width: 300px;
+            font-size: 1.1em;
+            line-height: 1.5;
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+            display: none;
+        }
+        
+        .announcement-box.visible {
+            display: block;
+        }
+        
+        .clickable-name {
+            cursor: pointer;
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .clickable-name:hover {
+            text-decoration: none;
+        }
+        
         @media (max-width: 768px) {
             .column {
                 flex: 100%;
@@ -179,7 +211,7 @@
         <a href="/links">Links</a>
         <a href="/about">About</a>
     </nav>
-    <h1 class="animate-in">Jack Whitaker</h1>
+    <h1 class="animate-in"><span class="clickable-name" onclick="toggleAnnouncement()">Jack Whitaker</span></h1>
     <h2 class="animate-in">Currently</h2>
     <ul class="animate-in">
         <li> Fellow at <a href="https://thrivecap.com/">Thrive Capital</a></li>
@@ -198,5 +230,14 @@
         <a href="https://x.com/jackgwhitaker">Twitter</a> · 
         <a href="https://www.linkedin.com/in/jack-gross-whitaker-75ba24264/">LinkedIn</a>
     </div>
+    <div class="announcement-box" id="announcementBox">
+        Read Trevor and my new essay on pretraining <a href="https://tmychow.substack.com/p/pre-training-isnt-dead-its-just-resting">here</a>
+    </div>
+    <script>
+        function toggleAnnouncement() {
+            const box = document.getElementById('announcementBox');
+            box.classList.toggle('visible');
+        }
+    </script>
 </body>
 </html>
