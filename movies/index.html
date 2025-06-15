@@ -7,6 +7,23 @@
     <title>Links</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .animate-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+        }
+        .nav { animation-delay: 0.2s; }
+        h1 { animation-delay: 0.4s; }
+        .contact { animation-delay: 0s; }
         body {
             font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
             line-height: 1.6;
@@ -151,13 +168,13 @@
     </style>
 </head>
 <body>
-    <nav class="nav">
-        <a href="/">Home</a>
+    <nav class="nav animate-in">
+        <a href="/" >Home</a>
+        <a href="/movies" class="active">Movies</a>
         <a href="/links">Links</a>
-        <a href="/questions">Questions</a>
         <a href="/about">About</a>
     </nav>
-    <h1>Movies</h1>
+    <h1 class="animate-in">Movies</h1>
     <p class="subtitle">Hopefully ones that you people haven't seen; By no means exhaustive and mostly made for Mohit Agarwal</p>
     
     <div class="section">
@@ -169,14 +186,13 @@
         <body>Masculin Féminin (1966)</body><br>
         <body>My Night At Mauds (1969)</body><br>
         <body>A Summers Tale (1996)</body><br>
-        <h2>Italian</h2>
-        <body>(working on)</body><br>
         <h2>American</h2>
-        <body>(working on)</body><br>
+        <body>The Last Waltz (1978)</body><br>
+        <body>My Dinner With Andre (1981)</body><br>
+        <body>Paris Texas (1984)</body><br>
+        <body></body><br>
     </div>
-</body>
-</html>
-    <div class="contact">
+    <div class="contact animate-in">
         <strong>Message Me:</strong><br>
         Email: <a href="mailto:johngrosswhitaker@gmail.com">johngrosswhitaker@gmail.com</a><br>
         <a href="https://x.com/jackgwhitaker">Twitter</a> · 
